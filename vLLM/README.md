@@ -4,7 +4,7 @@ Install the latest **RDNA4** architecture docker vLLM container for Ubuntu 24.04
 docker pull rocm/vllm-dev:rocm7.2_navi_ubuntu24.04_py3.12_pytorch_2.9_vllm_0.14.0rc0
 ```
 
-### 2️⃣ **Lounch the vLLM container**
+### 2️⃣ **Start the vLLM container**
 ```bash
 sudo docker run -it \
     -p 7860:7860 \
