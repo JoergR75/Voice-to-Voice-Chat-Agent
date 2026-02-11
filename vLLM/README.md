@@ -8,6 +8,7 @@ python3 -m pip install gradio
 python3 -m pip install git+https://github.com/openai/whisper.git
 python3 -m pip install asyncio
 python3 -m pip install edge-tts
+python3 -m pip install nest_asyncio
 ```
 
 ### 2️⃣ **Lounch the vLLM container**
