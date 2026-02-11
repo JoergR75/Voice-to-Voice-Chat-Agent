@@ -90,6 +90,7 @@ def chat_llama(user_input, history):
         )
 
     # Clear GPU memory
+    torch.cuda.synchronize()
     torch.cuda.empty_cache()
 
     response = tokenizer.decode(output[0], skip_special_tokens=True)
