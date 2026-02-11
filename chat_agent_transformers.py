@@ -178,10 +178,14 @@ with gr.Blocks(title="Llama 3.3 Local AI Agent (AMD ROCm 7.2)") as demo:
     ).then(lambda: "", None, txt)   # clears textbox
 
     # 2) Stop recording → send speech automatically
+    def speech_to_chat_and_reset(audio, history):
+        history, new_state, audio_out = speech_to_chat(audio, history)
+        return history, new_state, audio_out, None  # reset mic
+
     mic.stop_recording(
-        speech_to_chat,
+        speech_to_chat_and_reset,
         inputs=[mic, state],
-        outputs=[chatbot, state, audio_out]
+        outputs=[chatbot, state, audio_out, mic]  # include mic here
     )
 
 demo.launch(server_name="127.0.0.1", server_port=7860)
