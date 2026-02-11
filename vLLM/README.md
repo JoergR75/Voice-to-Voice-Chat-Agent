@@ -51,3 +51,25 @@ python3 -m pip install git+https://github.com/openai/whisper.git
 python3 -m pip install asyncio
 python3 -m pip install edge-tts
 ```
+
+### 4️⃣ **Download** the Chat Agent script
+```bash
+wget https://raw.githubusercontent.com/JoergR75/Voice-to-Voice-Chat-Agent/refs/heads/main/chat_agent_transformers.py
+```
+
+### 3️⃣ **Run** the Chat Agent
+```bash
+python3 chat_agent_transformers.py
+```
+
+### 4️⃣ Launch the Gradio web Agent from another device connected to same network
+
+First, SSH into the web server and forward port **7860**:
+```echo
+ssh -L 7860:127.0.0.1:7860 ai1@pc1
+```
+or use the the server IP address
+```echo
+ssh -L 7860:127.0.0.1:7860 ai1@192.168.178.xxx
+```
+Now you can open **http://127.0.0.1:7860** in your local browser to access the Gradio Web Agent.
