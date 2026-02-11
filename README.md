@@ -12,3 +12,8 @@ python3 -m pip install edge-tts
 ```bash
 wget https://raw.githubusercontent.com/JoergR75/Voice-to-Voice-Chat-Agent/refs/heads/main/chat_agent_transformers.py
 ```
+
+### 3️⃣ **Start** the Chat Agent
+```bash
+python3 chat_agent_transformers.py
+```
