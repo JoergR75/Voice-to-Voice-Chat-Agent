@@ -1,4 +1,4 @@
-### 1️⃣ **Update and install** the container environment
+### 1️⃣ **Update and install** the Python environment
 ```bash
 sudo apt update
 python3 -m pip install --upgrade pip wheel
