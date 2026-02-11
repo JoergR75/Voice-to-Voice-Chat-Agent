@@ -1,4 +1,4 @@
-🦙 Voice-to-Voice Chat Agent (Llama 3.3 + Whisper)
+# 🦙 Voice-to-Voice Chat Agent (Llama 3.3 + Whisper)
 
 This project runs a local AI chat agent on your machine using Llama 3.3 (8B Instruct) for language generation and OpenAI Whisper for speech recognition.
 
@@ -11,6 +11,8 @@ It features:
 🎙️ Edge TTS for text-to-speech responses
 
 🔒 Fully local: no cloud API keys needed
+
+## 🚀 Installation
 
 ### 1️⃣ **Update and install** the Python environment
 ```bash
