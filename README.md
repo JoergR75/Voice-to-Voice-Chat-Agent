@@ -8,3 +8,7 @@ python3 -m pip install asyncio
 python3 -m pip install edge-tts
 ```
 
+### 3️⃣ **Download** the Chat Agent script
+```bash
+wget
+```
