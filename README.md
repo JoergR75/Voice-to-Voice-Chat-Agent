@@ -6,7 +6,7 @@ It features:
 
 🤖 Text and voice chat: type or speak, get replies in text or audio
 
-⚡ Local GPU acceleration using AMD ROCm / CUDA-compatible GPUs
+⚡ Local GPU acceleration using AMD ROCm GPUs
 
 🎙️ Edge TTS for text-to-speech responses
 
