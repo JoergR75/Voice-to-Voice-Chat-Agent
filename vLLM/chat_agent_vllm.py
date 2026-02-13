@@ -121,6 +121,7 @@ if __name__ == "__main__":
     - **LLM:** Llama 3.3 8B Instruct
     - **ASR:** OpenAI Whisper (base, 74M parameters)
     - **Framework:** PyTorch 2.11 (Preview)
+    - **Library:** vLLM 0.14
     - **UI:** Gradio Web Interface
 
     ## 🚀 Hardware & Platform
