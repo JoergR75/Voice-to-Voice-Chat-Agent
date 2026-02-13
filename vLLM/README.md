@@ -1,3 +1,5 @@
+## 🚀 Installation
+
 ### 1️⃣ **System preperation**
 Install the latest **RDNA4** architecture docker vLLM container for Ubuntu 24.04
 ```bash
