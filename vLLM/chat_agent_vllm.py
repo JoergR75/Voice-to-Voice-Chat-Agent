@@ -178,7 +178,7 @@ if __name__ == "__main__":
 
         # 2) Stop recording → send speech automatically
         def speech_to_chat_and_reset(audio, history):
-            history, new_state, audio_out = speech_to_chat(audio, history)
+            history, new_state, audio_out = speech_to_chat(llm, audio, history)
             return history, new_state, audio_out, None  # reset mic
 
         mic.stop_recording(
