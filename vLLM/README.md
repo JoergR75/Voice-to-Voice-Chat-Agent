@@ -8,8 +8,6 @@ docker pull rocm/vllm-dev:rocm7.2_navi_ubuntu24.04_py3.12_pytorch_2.9_vllm_0.14.
 ```bash
 sudo docker run -it \
     -p 7860:7860 \
-    --device /dev/snd:/dev/snd \
-    --group-add audio \
     --device=/dev/kfd \
     --device=/dev/dri/card2 \
     --device=/dev/dri/renderD129 \
