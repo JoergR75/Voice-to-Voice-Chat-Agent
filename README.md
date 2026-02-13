@@ -8,35 +8,35 @@ No cloud. No API keys. Just fast, local inference.
 
 This project builds a sarcastic, voice-enabled AI assistant named Eva, running locally using:
 
-🧠 LLM: Llama 3.3 8B Instruct (via vLLM)
+- 🧠 LLM: Llama 3.3 8B Instruct (via vLLM)
 
-🎙️ Speech-to-Text: Whisper (base)
+- 🎙️ Speech-to-Text: Whisper (base)
 
-🔊 Text-to-Speech: Edge-TTS (AriaNeural voice)
+- 🔊 Text-to-Speech: Edge-TTS (AriaNeural voice)
 
-🌐 UI: Gradio web interface
+- 🌐 UI: Gradio web interface
 
-⚡ Inference Engine: vLLM
+- ⚡ Inference Engine: vLLM
 
-🖥️ GPU Platform: AMD ROCm
+- 🖥️ GPU Platform: AMD ROCm
 
 Everything runs 100% locally on an AMD GPU with ROCm support.
 
 ## 🧠 Features
 
-💬 Text-based chat
+- 💬 Text-based chat
 
-🎙️ Voice input (microphone → Whisper → LLM)
+- 🎙️ Voice input (microphone → Whisper → LLM)
 
-🔊 AI voice responses (Edge-TTS)
+- 🔊 AI voice responses (Edge-TTS)
 
-⚡ High-speed inference with vLLM
+- ⚡ High-speed inference with vLLM
 
-🧩 Custom personality system prompt
+- 🧩 Custom personality system prompt
 
-🖥️ Fully local GPU execution
+- 🖥️ Fully local GPU execution
 
-🔁 Persistent chat history within session
+- 🔁 Persistent chat history within session
 
 ## 🏗 Architecture
 
