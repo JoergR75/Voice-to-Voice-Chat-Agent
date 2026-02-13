@@ -95,6 +95,22 @@ Tested on:
 
 Designed specifically for AMD GPU acceleration.
 
+## 🎭 Personality System
+
+- Eva is configured via a structured system prompt:
+
+- Sharp wit
+
+- Dry humor
+
+- Short and confident replies
+
+- Helpful first, funny second
+
+- Occasional references to running locally and speed
+
+- No long explanations unless requested
+
 ## 🚀 Installation
 
 ### 1️⃣ **System preperation**
