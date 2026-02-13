@@ -39,11 +39,11 @@ python3 chat_agent_transformers.py
 
 First, SSH into the web server and forward port **7860**:
 ```echo
-ssh -L 7860:127.0.0.1:7860 ai1@pc1
+ssh -L 7860:0.0.0.0:7860 ai1@pc1
 ```
 or use the the server IP address
 ```echo
-ssh -L 7860:127.0.0.1:7860 ai1@192.168.178.xxx
+ssh -L 7860:0.0.0.0:7860 ai1@192.168.178.xxx
 ```
 Now you can open **http://localhost:7860** in your local browser to access the Gradio Web Agent.
 
