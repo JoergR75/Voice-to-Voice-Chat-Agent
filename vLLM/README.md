@@ -67,7 +67,7 @@ Microphone → Whisper → Llama 3.3 (vLLM) → Edge-TTS → Audio Playback
 MODEL_ID = "DavidAU/Llama3.3-8B-Instruct-Thinking-Heretic-Uncensored-Claude-4.5-Opus-High-Reasoning"
 
 SamplingParams(
-    max_tokens=128,
+    max_tokens=256,
     temperature=0.8,
     top_p=0.9
 )
