@@ -169,18 +169,22 @@ if __name__ == "__main__":
 
         audio_out = gr.Audio(label="AI Voice Reply", autoplay=True)
 
-        # TEXT
+        # 1) TEXT
         txt.submit(
             lambda text, hist: text_to_chat(llm, text, hist),
             inputs=[txt, state],
             outputs=[chatbot, state, audio_out]
         ).then(lambda: "", None, txt)
 
-        # SPEECH
+        # 2) Stop recording → send speech automatically
+        def speech_to_chat_and_reset(audio, history):
+            history, new_state, audio_out = speech_to_chat(audio, history)
+            return history, new_state, audio_out, None  # reset mic
+
         mic.stop_recording(
-            lambda audio, hist: speech_to_chat(llm, audio, hist),
+            speech_to_chat_and_reset,
             inputs=[mic, state],
-            outputs=[chatbot, state, audio_out]
+            outputs=[chatbot, state, audio_out, mic]  # include mic here
         )
 
     demo.launch(server_name="0.0.0.0", server_port=7860)
