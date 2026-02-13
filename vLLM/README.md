@@ -64,13 +64,5 @@ python3 chat_agent_vllm.py
 ```
 
 ### 4️⃣ Launch the Gradio web Agent from another device connected to same network
+Now you can open **http://localhost:7860** in your local browser to access the Gradio Web Agent.
 
-First, SSH into the web server and forward port **7860**:
-```echo
-ssh -L 7860:127.0.0.1:7860 ai1@pc1
-```
-or use the the server IP address
-```echo
-ssh -L 7860:127.0.0.1:7860 ai1@192.168.178.xxx
-```
-Now you can open **http://127.0.0.1:7860** in your local browser to access the Gradio Web Agent.
