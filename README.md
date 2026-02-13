@@ -17,12 +17,12 @@ It features:
 ### 1️⃣ **Update and install** the Python environment
 ```bash
 sudo apt update
+sudo apt install ffmpeg -y
 python3 -m pip install --upgrade pip wheel --break-system-packages
 python3 -m pip install gradio --break-system-packages
 python3 -m pip install git+https://github.com/openai/whisper.git --break-system-packages
 python3 -m pip install asyncio --break-system-packages
 python3 -m pip install edge-tts --break-system-packages
-python3 -m pip install ffmpeg --break-system-packages
 ```
 
 ### 2️⃣ **Download** the Chat Agent script
