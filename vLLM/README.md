@@ -45,6 +45,7 @@ For production use, consider adding volume mounts for model storage and persiste
 ```bash
 sudo apt update
 sudo apt install nano -y
+sudo apt install ffmpeg -y
 python3 -m pip install --upgrade pip wheel
 python3 -m pip install gradio
 python3 -m pip install git+https://github.com/openai/whisper.git
