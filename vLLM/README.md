@@ -1,3 +1,100 @@
+# 🦙 Llama 3.3 Local AI Voice Agent (AMD ROCm + vLLM)
+
+A fully local, GPU-accelerated AI voice assistant powered by vLLM, Gradio, OpenAI Whisper, and Microsoft Edge TTS — running entirely on AMD ROCm hardware.
+
+No cloud. No API keys. Just fast, local inference.
+
+## 🚀 Overview
+
+This project builds a sarcastic, voice-enabled AI assistant named Eva, running locally using:
+
+- 🧠 LLM: Llama 3.3 8B Instruct (via vLLM)
+
+- 🎙️ Speech-to-Text: Whisper (base)
+
+- 🔊 Text-to-Speech: Edge-TTS (AriaNeural voice)
+
+- 🌐 UI: Gradio web interface
+
+- ⚡ Inference Engine: vLLM
+
+- 🖥️ GPU Platform: AMD ROCm
+
+Everything runs 100% locally on an AMD GPU with ROCm support.
+
+## 🧠 Features
+
+- 💬 Text-based chat
+
+- 🎙️ Voice input (microphone → Whisper → LLM)
+
+- 🔊 AI voice responses (Edge-TTS)
+
+- ⚡ High-speed inference with vLLM
+
+- 🧩 Custom personality system prompt
+
+- 🖥️ Fully local GPU execution
+
+- 🔁 Persistent chat history within session
+
+## 🏗 Architecture
+
+**Pipeline Flow:**
+
+Microphone → Whisper → Llama 3.3 (vLLM) → Edge-TTS → Audio Playback
+
+**Core Components**
+
+- Model loading via vllm.LLM
+
+- Chat template handling with Hugging Face tokenizer
+
+- Async TTS wrapped for synchronous use
+
+- Gradio Blocks UI with:
+
+- Chatbot display
+
+- Text input
+
+- Microphone input
+
+- Autoplay audio responses
+
+## ⚙️ Model Configuration
+```python
+MODEL_ID = "DavidAU/Llama3.3-8B-Instruct-Thinking-Heretic-Uncensored-Claude-4.5-Opus-High-Reasoning"
+
+SamplingParams(
+    max_tokens=128,
+    temperature=0.8,
+    top_p=0.9
+)
+```
+
+- Short, sharp responses
+
+- Dry humor personality
+
+- Optimized for speed and responsiveness
+
+## 🖥 Hardware & Platform
+
+Tested on:
+
+- AMD Radeon™ AI PRO R9700 (RDNA4)
+
+- ROCm 7.2
+
+- Ubuntu 22.04 / 24.04
+
+- PyTorch 2.11 (Preview)
+
+- vLLM 0.14
+
+Designed specifically for AMD GPU acceleration.
+
 ## 🚀 Installation
 
 ### 1️⃣ **System preperation**
