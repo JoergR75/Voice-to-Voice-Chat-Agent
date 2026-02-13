@@ -113,7 +113,7 @@ if __name__ == "__main__":
     # Gradio UI
     # -----------------------------
     with gr.Blocks(title="🦙 Llama 3.3 Local AI Agent | AMD ROCm 7.2") as demo:
-    gr.Markdown("""
+        gr.Markdown("""
     # 🦙 Llama 3.3 – Local AI Chat Agent
     ### 🤖 Sarcastic • 🎙️ Voice-Enabled • ⚡ GPU-Accelerated • 100% local
 
