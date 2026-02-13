@@ -1,6 +1,6 @@
-# 🦙 Llama 3.3 Local AI Voice Agent (AMD ROCm + vLLM)
+# 🦙 Llama 3.3 Local AI Voice Agent (AMD ROCm + transformers)
 
-A fully local, GPU-accelerated AI voice assistant powered by vLLM, Gradio, OpenAI Whisper, and Microsoft Edge TTS — running entirely on AMD ROCm hardware.
+A fully local, GPU-accelerated AI voice assistant powered by transformers, Gradio, OpenAI Whisper, and Microsoft Edge TTS — running entirely on AMD ROCm hardware.
 
 No cloud. No API keys. Just fast, local inference.
 
@@ -8,7 +8,7 @@ No cloud. No API keys. Just fast, local inference.
 
 This project builds a sarcastic, voice-enabled AI assistant named Eva, running locally using:
 
-- 🧠 LLM: Llama 3.3 8B Instruct (via vLLM)
+- 🧠 LLM: Llama 3.3 8B Instruct (via transformers)
 
 - 🎙️ Speech-to-Text: Whisper (base)
 
@@ -16,7 +16,7 @@ This project builds a sarcastic, voice-enabled AI assistant named Eva, running l
 
 - 🌐 UI: Gradio web interface
 
-- ⚡ Inference Engine: vLLM
+- ⚡ Inference Engine: transformers
 
 - 🖥️ GPU Platform: AMD ROCm
 
@@ -30,7 +30,7 @@ Everything runs 100% locally on an AMD GPU with ROCm support.
 
 - 🔊 AI voice responses (Edge-TTS)
 
-- ⚡ High-speed inference with vLLM
+- ⚡ High-speed inference with transformers
 
 - 🧩 Custom personality system prompt
 
@@ -42,11 +42,11 @@ Everything runs 100% locally on an AMD GPU with ROCm support.
 
 **Pipeline Flow:**
 
-Microphone → Whisper → Llama 3.3 (vLLM) → Edge-TTS → Audio Playback
+Microphone → Whisper → Llama 3.3 (transformers) → Edge-TTS → Audio Playback
 
 **Core Components**
 
-- Model loading via vllm.LLM
+- Model loading via transformers
 
 - Chat template handling with Hugging Face tokenizer
 
@@ -90,8 +90,6 @@ Tested on:
 - Ubuntu 22.04 / 24.04
 
 - PyTorch 2.11 (Preview)
-
-- vLLM 0.14
 
 Designed specifically for AMD GPU acceleration.
 
