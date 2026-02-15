@@ -104,8 +104,7 @@ sudo docker run -it \
 |---------------|---------|
 | `-p 7860:7860` | Exposes port 7860 (commonly used for web UIs or API endpoints). |
 | `--device=/dev/kfd` | Grants access to the ROCm kernel driver (required for compute). |
-| `--device=/dev/dri/card2` | Passes the physical GPU device into the container. |
-| `--device=/dev/dri/renderD129` | Enables render node access for compute workloads. |
+| `--device=/dev/dri/` | Passes the physical GPU device into the container. |
 | `--security-opt seccomp=unconfined` | Required to avoid ROCm-related syscall restrictions. |
 | `--group-add video` | Ensures proper GPU access permissions inside the container. |
 
