@@ -1,3 +1,34 @@
+#!/bin/python
+# ================================================================================================================
+# A fully local, GPU-accelerated AI voice assistant powered by vLLM, Gradio, OpenAI Whisper, Streaming enabled and
+# Microsoft Edge TTS — running entirely on AMD ROCm hardware.
+# ================================================================================================================
+# Description:
+# This script automates the installation of AMD ROCm 7.2.0, PyTorch 2.11.0 (Preview (Nightly)), Transformers, and Docker
+# on Ubuntu 22.04.x and 24.04.x systems. It automatically fetches the appropriate installation scripts and performs
+# a fully non-interactive setup optimized for both desktop and server environments.
+# ================================================================================================================
+#
+# REQUIREMENTS:
+# ---------------------------------------------------------------------------------------------------------------
+# Operating System (OS):
+#   - Ubuntu 22.04.5 LTS (Jammy Jellyfish)
+#   - Ubuntu 24.04.3 LTS (Noble Numbat)
+#
+# Kernel Versions Tested:
+#   - Ubuntu 22.04.5: 5.15.0-160
+#   - Ubuntu 24.04.3: 6.8.0-94
+#
+# Supported Hardware:
+#   - AMD CDNA1 | CDNA2 | CDNA3 | CDNA4 | RDNA3 | RDNA4 GPU Architectures
+#
+# EXECUTION DETAILS:
+# ---------------------------------------------------------------------------------------------------------------
+# Author:                Joerg Roskowetz
+# Estimated Runtime:     ~15 minutes at first run downloading the vLLM container and model (depending on system performance and internet speed)
+# Last Updated:          February 15th, 2026
+# ================================================================================================================
+
 import gradio as gr
 import whisper
 import tempfile
