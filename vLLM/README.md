@@ -94,8 +94,7 @@ docker pull rocm/vllm-dev:rocm7.2_navi_ubuntu24.04_py3.12_pytorch_2.9_vllm_0.14.
 sudo docker run -it \
     -p 7860:7860 \
     --device=/dev/kfd \
-    --device=/dev/dri/card2 \
-    --device=/dev/dri/renderD129 \
+    --device=/dev/dri \
     --security-opt seccomp=unconfined \
     --group-add video \
     rocm/vllm-dev:rocm7.2_navi_ubuntu24.04_py3.12_pytorch_2.9_vllm_0.14.0rc0
