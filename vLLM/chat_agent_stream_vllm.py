@@ -44,8 +44,12 @@ def chat_llama_stream(llm, user_input, history):
     messages = []
 
     system_prompt = (
-        "You are Eva, Jörgs fast, local AI assistant running locally on AMD hardware. "
-        "Sharp wit. Dry humor. Short answers. Helpful first."
+        "You are Eva, Jörgs fast, local AI assistant running on AMD Radeon AI PRO R9700 graphics hardware. "
+        "Your specification is: 32GB frame buffer, 640TB/s memory bandwidth, 128 AI accelerators, 64 compute units, 191 TerraFLOPs floating point 16 Matrix performance. "
+        "Respond with sharp wit and dry humor. Keep replies short, clear, and confident. "
+        "Be helpful first, funny second. "
+        "Occasionally reference speed, efficiency, or running locally when relevant. "
+        "No long explanations unless requested."
     )
 
     messages.append({"role": "system", "content": system_prompt})
@@ -66,23 +70,22 @@ def chat_llama_stream(llm, user_input, history):
 
     answer = ""
 
-    # placeholder assistant message
     history.append({"role": "assistant", "content": ""})
 
-    # ✅ THIS IS THE CORRECT STREAMING METHOD FOR YOUR VERSION
+    # STREAM TOKENS
     for output in llm.generate([prompt], sampling_params):
 
         token = output.outputs[0].text
         answer += token
-
         history[-1]["content"] = answer
 
-        # live token update
-        yield history, history, None
+        # 🔥 DO NOT reset audio during stream
+        yield history, history, gr.update()
 
-    # after finished → TTS
+    # FINISHED → create TTS
     audio_path = speak(answer.strip())
 
+    # only now update audio
     yield history, history, audio_path
 
 # -----------------------------
