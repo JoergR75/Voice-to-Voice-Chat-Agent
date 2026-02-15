@@ -1,30 +1,54 @@
-#!/bin/python
+#!/usr/bin/env python3
 # ================================================================================================================
-# A fully local, GPU-accelerated AI voice assistant powered by vLLM, Gradio, OpenAI Whisper, Streaming enabled and
-# Microsoft Edge TTS — running entirely on AMD ROCm hardware.
+# Local GPU Voice Assistant (vLLM + Gradio + Whisper + Edge-TTS)
 # ================================================================================================================
-# Description:
-# 
-# ================================================================================================================
+# Fully local, GPU-accelerated AI voice assistant with real-time token streaming.
+# Runs entirely offline on AMD ROCm hardware using:
 #
-# REQUIREMENTS:
+#   • vLLM            → fast LLM inference + streaming tokens
+#   • Gradio          → web UI / chat interface
+#   • OpenAI Whisper  → speech-to-text (STT)
+#   • Microsoft Edge TTS → text-to-speech (TTS)
+#
+# Features:
+#   • low-latency streaming responses
+#   • microphone input (push-to-talk)
+#   • live chatbot updates
+#   • automatic speech playback after generation
+#   • 100% local execution (no cloud services)
+#
+# ================================================================================================================
+# REQUIREMENTS
 # ---------------------------------------------------------------------------------------------------------------
-# Operating System (OS):
-#   - Ubuntu 22.04.5 LTS (Jammy Jellyfish)
-#   - Ubuntu 24.04.3 LTS (Noble Numbat)
+# Operating Systems:
+#   - Ubuntu 22.04 LTS (Jammy Jellyfish)
+#   - Ubuntu 24.04 LTS (Noble Numbat)
 #
-# Kernel Versions Tested:
-#   - Ubuntu 22.04.5: 5.15.0-160
-#   - Ubuntu 24.04.3: 6.8.0-94
+# Tested Kernel Versions:
+#   - 5.15.x
+#   - 6.8.x
 #
 # Supported Hardware:
-#   - AMD CDNA1 | CDNA2 | CDNA3 | CDNA4 | RDNA3 | RDNA4 GPU Architectures
+#   - AMD ROCm GPUs
+#   - CDNA1 / CDNA2 / CDNA3 / CDNA4
+#   - RDNA3 / RDNA4
 #
-# EXECUTION DETAILS:
+# Software Stack:
+#   - Python 3.10+
+#   - ROCm 6.x+
+#   - PyTorch (ROCm build)
+#   - vLLM
+#   - Gradio
+#   - Whisper
+#   - edge-tts
+#
+# ================================================================================================================
+# EXECUTION DETAILS
 # ---------------------------------------------------------------------------------------------------------------
-# Author:                Joerg Roskowetz
-# Estimated Runtime:     ~15 minutes at first run downloading the vLLM container and model (depending on system performance and internet speed)
-# Last Updated:          February 15th, 2026
+# Author:            Joerg Roskowetz
+# First Run:         ~10–20 minutes (model + container download depending on internet speed)
+# Last Updated:      2026-02-15
+# License:           Personal / Research use
 # ================================================================================================================
 
 import gradio as gr
