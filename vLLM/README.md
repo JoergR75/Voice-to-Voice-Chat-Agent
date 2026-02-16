@@ -14,13 +14,13 @@ Everything runs 100% locally on an AMD GPU with ROCm support.
 
 ## 🧠 Features
 
-- 💬 Text-based chat
-- 🎙️ Voice input (microphone → Whisper → LLM)
-- 🔊 AI voice responses (Edge-TTS)
-- ⚡ High-speed inference with vLLM
-- 🧩 Custom personality system prompt
-- 🖥️ Fully local GPU execution
-- 🔁 Persistent chat history within session
+- Text-based chat with streaming responses
+- Voice input via microphone → Whisper → LLM
+- AI voice responses using Edge-TTS
+- Low-latency, high-speed inference with vLLM
+- Customizable personality through system prompts
+- Fully local GPU execution on AMD ROCm hardware
+- Persistent chat history within the session
 
 ## 🏗 Architecture
 
