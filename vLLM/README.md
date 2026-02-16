@@ -26,13 +26,14 @@ Everything runs 100% locally on an AMD GPU with ROCm support.
 
 **Pipeline Flow:**
 
-Microphone → Whisper → Llama 3.3 (vLLM) → Edge-TTS → Audio Playback
+Microphone → Whisper → Llama 3.3 (vLLM with real-time streaming) → Edge-TTS → Audio Playback
 
 **Core Components**
 
-- Model loading via vllm.LLM
+- Model loading and inference via vllm.LLM
 - Chat template handling with Hugging Face tokenizer
-- Async TTS wrapped for synchronous use
+- Real-time token streaming from vLLM to the UI
+- Async Edge-TTS wrapped for synchronous playback
 - Gradio Blocks UI with:
 - Chatbot display
 - Text input
