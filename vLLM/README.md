@@ -6,14 +6,11 @@ No cloud. No API keys. Just fast, local inference.
 
 ## 🚀 Overview
 
-This project builds a sarcastic, voice-enabled AI assistant named Eva, running locally using:
+This project provides a fully local, GPU-accelerated AI voice assistant running on AMD ROCm hardware. It combines high-performance LLM inference with real-time speech input and spoken responses, all without relying on cloud services or external APIs.
 
-- 🧠 LLM: Llama 3.3 8B Instruct (via vLLM)
-- 🎙️ Speech-to-Text: Whisper (base)
-- 🔊 Text-to-Speech: Edge-TTS (AriaNeural voice)
-- 🌐 UI: Gradio web interface
-- ⚡ Inference Engine: vLLM
-- 🖥️ GPU Platform: AMD ROCm
+The assistant uses vLLM for fast, streaming language model inference, Whisper for speech-to-text transcription, Edge-TTS for natural voice output, and Gradio for a browser-based chat interface. Responses are streamed token by token for low latency, and audio playback is automatically generated once the answer is complete.
+
+The system runs entirely offline on Ubuntu 22.04 or 24.04 with ROCm 7.2 or newer and supports modern AMD GPUs across CDNA and RDNA generations. It is designed for private AI assistant use, on-device LLM experimentation, enterprise demos, and showcasing high-performance local inference on AMD hardware.
 
 Everything runs 100% locally on an AMD GPU with ROCm support.
 
