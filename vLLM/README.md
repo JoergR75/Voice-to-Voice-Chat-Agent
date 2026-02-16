@@ -1,8 +1,6 @@
 # Local GPU Voice Assistant with Real-Time LLM Streaming (ROCm + vLLM + Whisper + TTS)
 
-A fully local, GPU-accelerated AI voice assistant powered by vLLM, Gradio, OpenAI Whisper, and Microsoft Edge TTS — running entirely on AMD ROCm hardware.
-
-No cloud. No API keys. Just fast, local inference.
+A fully offline, GPU-accelerated AI voice assistant that streams LLM responses in real time with speech input and output on AMD ROCm hardware.
 
 ## 🚀 Overview
 
