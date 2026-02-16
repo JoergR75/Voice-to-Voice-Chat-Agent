@@ -131,12 +131,12 @@ python3 -m pip install edge-tts
 
 ### 4️⃣ **Download** the Chat Agent script
 ```bash
-wget https://raw.githubusercontent.com/JoergR75/Voice-to-Voice-Chat-Agent/refs/heads/main/vLLM/chat_agent_vllm.py
+wget https://raw.githubusercontent.com/JoergR75/Voice-to-Voice-Chat-Agent/refs/heads/main/vLLM/chat_agent_stream_vllm.py
 ```
 
 ### 3️⃣ **Run** the Chat Agent
 ```bash
-python3 chat_agent_vllm.py
+python3 chat_agent_stream_vllm.py
 ```
 
 ### 4️⃣ Launch the Gradio web Agent from another device connected to same network
