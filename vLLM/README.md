@@ -1,4 +1,4 @@
-# 🦙 Llama 3.3 Local AI Voice Agent (AMD ROCm + vLLM + stream)
+# Local GPU Voice Assistant with Real-Time LLM Streaming (ROCm + vLLM + Whisper + TTS)
 
 A fully local, GPU-accelerated AI voice assistant powered by vLLM, Gradio, OpenAI Whisper, and Microsoft Edge TTS — running entirely on AMD ROCm hardware.
 
